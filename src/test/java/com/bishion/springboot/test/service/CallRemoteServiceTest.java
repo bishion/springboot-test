@@ -21,7 +21,7 @@ public class CallRemoteServiceTest {
     @Test
     public void callGitHub() {
         BDDMockito.given(this.baiduService.request()).willReturn("SUCCESS");
-        String result = callRemoteService.callBadu();
+        String result = callRemoteService.callBaidu();
         System.out.println(result);
 
     }

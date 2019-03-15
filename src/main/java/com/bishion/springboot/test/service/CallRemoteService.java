@@ -12,15 +12,12 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class CallRemoteService {
-    @Value("${config.username}")
-    private String username;
-
     @Autowired
     private BaiduService baiduService;
 
-    public String callBadu() {
-        String badu = baiduService.request();
+    public String callBaidu() {
+        String baidu = baiduService.request();
 
-        return username + ":" + badu.substring(2, 4);
+        return baidu.substring(2, 4);
     }
 }

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class UserController {
-    @Value("${config.username}")
+    @Value("${config.username:bishion}")
     private String username;
     @Autowired
     private UserService userService;

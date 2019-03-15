@@ -16,6 +16,6 @@ public class RemoteController {
     private CallRemoteService callRemoteService;
     @RequestMapping("/request")
     public String request(){
-        return callRemoteService.callBadu();
+        return callRemoteService.callBaidu();
     }
 }

@@ -4,3 +4,9 @@ spring:
       uri: http://localhost:8082
       name: springboot
       profile: test
+  h2:
+    console:
+      path: /h2
+      enabled: true
+  datasource:
+    url: jdbc:h2:~/h2/test
