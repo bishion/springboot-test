@@ -7,7 +7,6 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableFeignClients
-@MapperScan("com.bishion.springboot.test.dao")
 public class SpringbootTestApplication {
 
     public static void main(String[] args) {

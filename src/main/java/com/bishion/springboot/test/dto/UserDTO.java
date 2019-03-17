@@ -2,6 +2,7 @@ package com.bishion.springboot.test.dto;
 
 public class UserDTO {
 
+    private Integer id;
     private String username;
     private Integer age;
 
@@ -19,5 +20,13 @@ public class UserDTO {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 }
