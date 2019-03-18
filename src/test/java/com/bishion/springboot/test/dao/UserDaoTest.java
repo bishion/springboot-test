@@ -13,9 +13,10 @@ import org.springframework.util.Assert;
 
 import java.util.List;
 
-//@RunWith(SpringRunner.class)
-//@MybatisTest
-//@Rollback(false)
+@RunWith(SpringRunner.class)
+@MybatisTest
+@Rollback(false)
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class UserDaoTest {
 
     @Autowired

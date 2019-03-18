@@ -17,13 +17,13 @@ import java.util.List;
 @RestController
 public class UserController {
     @Value("${config.username:bishion}")
-    private String username;
+    private String defaultUser;
     @Autowired
     private UserService userService;
     @RequestMapping("/addUser")
     public String addUser(UserDTO userDTO){
         if(StringUtils.isEmpty(userDTO.getUsername())){
-            userDTO.setUsername(username);
+            userDTO.setUsername(defaultUser);
         }
         return userService.addUser(userDTO);
     }
