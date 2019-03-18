@@ -1,5 +1,7 @@
 package com.bishion.springboot.test.dto;
 
+import java.util.Objects;
+
 public class UserDTO {
 
     private Integer id;
@@ -28,5 +30,24 @@ public class UserDTO {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof UserDTO)){
+            return false;
+        }
+        UserDTO userDTO = (UserDTO) o;
+        return Objects.equals(getId(), userDTO.getId()) &&
+                Objects.equals(getUsername(), userDTO.getUsername()) &&
+                Objects.equals(getAge(), userDTO.getAge());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getUsername(), getAge());
     }
 }

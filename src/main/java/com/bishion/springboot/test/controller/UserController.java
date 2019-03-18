@@ -16,7 +16,7 @@ import java.util.List;
 
 @RestController
 public class UserController {
-    @Value("${config.username:bishion}")
+    @Value("${config.username}")
     private String defaultUser;
     @Autowired
     private UserService userService;
@@ -38,6 +38,9 @@ public class UserController {
 
     @RequestMapping("/query")
     public List<UserDTO> query(String username){
+        if (StringUtils.isEmpty(username)){
+            username = this.defaultUser;
+        }
         List<User> users =  userService.queryUser(username);
         return transfer(users);
 

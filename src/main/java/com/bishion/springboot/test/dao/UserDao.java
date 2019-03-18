@@ -16,6 +16,6 @@ public interface UserDao {
 
     @Select("select * from User where username = #{username}")
     List<User> queryUserByName(String username);
-
+    // 该方法为 xml 配置
     Integer updateUserById(User user);
 }
